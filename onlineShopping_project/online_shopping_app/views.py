@@ -32,9 +32,11 @@ def signup(request):
 
 def productdetail(request,p_id):
     api_url = 'http://127.0.0.1:8000/shopping/product/'+str(p_id)
+    all_response  = requests.get('http://127.0.0.1:8000/shopping/product/')
     response = requests.get(api_url)
+    all_product = all_response.json()
     product_data = response.json()
-    return  render(request, 'online_shopping_app/product_detail.html',{"product":product_data})
+    return  render(request, 'online_shopping_app/product_detail.html',{"product":product_data, "product_list":all_product})
 
 def invoice(request):
     return render(request, 'online_shopping_app/invoice.html', {})

@@ -42,7 +42,7 @@ router.register('product', ProductViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('shopping/', include(router.urls)),
+    path('shopping/', include(router.urls)), # this is for product API
     path('', include('online_shopping_app.urls')),
     path('signup/', views.signup, name='signup'),
     path('login/', auth_views.LoginView.as_view(), name="login"),

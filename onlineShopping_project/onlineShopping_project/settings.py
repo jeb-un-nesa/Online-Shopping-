@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'onlineShoppingDB',
         'USER': 'postgres',
-        'PASSWORD': 'jemi3485',
+        'PASSWORD': '####',
         'HOST': '',
         'PORT': '5432',
         'unicode_results': True,
